@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-earth-clay: #9C5B42; /* terracotta */
+  --color-earth-dark: #2D2421; /* ink */
+  --color-earth-light: #F1ECE6; /* linen */
+  --color-earth-linen: #FDFBF8; /* bg */
+  --color-clay-muted: #7A665A;  /* clay */
+  --color-plum-deep: #2D2421;   /* ink */
+  --color-plum-muted: #7A665A;  /* clay */
+  --color-gold-accent: #C5A170;  /* warm sandy gold */
+}
+
+@layer base {
+  body {
+    @apply bg-earth-linen text-earth-dark font-sans antialiased selection:bg-earth-clay/20 selection:text-earth-dark;
+  }
+  
+  h1, h2, h3, h4, .font-serif-heading {
+    @apply font-serif tracking-tight font-medium;
+  }
+}
+
+.serif-italic {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+}
+
+.pill-mask {
+  border-radius: 200px 200px 0 0;
+}
+
+.card-shadow {
+  box-shadow: 0 10px 30px rgba(45, 36, 33, 0.05);
+}
+
+/* Custom styles for tactile grain or sensory experiences */
+.bg-tactile-pattern {
+  position: relative;
+}
+
+.bg-tactile-pattern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.015;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-earth-light;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-earth-clay/30 rounded;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-earth-clay/50;
+}
