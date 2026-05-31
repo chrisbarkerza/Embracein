@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somatic Offerings | EmbraceIN - Sandton, JHB</title>
+  <meta name="description" content="Explore our trauma-informed doula guardianship, pelvic reclamation, sovereign prenatal yoga, and moon-fire circles in Beverley, Sandton.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v4 via CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- Tailwind Theme Configurations -->
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+      --font-serif: "Cormorant Garamond", Georgia, serif;
+      --font-mono: "JetBrains Mono", monospace;
+      
+      --color-earth-clay: #9C5B42; /* terracotta */
+      --color-earth-dark: #2D2421; /* ink */
+      --color-earth-light: #F1ECE6; /* linen */
+      --color-earth-linen: #FDFBF8; /* bg */
+      --color-clay-muted: #7A665A;  /* clay */
+      --color-plum-deep: #2D2421;   /* ink */
+      --color-plum-muted: #7A665A;  /* clay */
+      --color-gold-accent: #C5A170;  /* warm sandy gold */
+    }
+    
+    @layer base {
+      body {
+        @apply bg-earth-linen text-earth-dark font-sans antialiased selection:bg-earth-clay/20 selection:text-earth-dark;
+      }
+      
+      h1, h2, h3, h4, .font-serif-heading {
+        @apply font-serif tracking-tight font-medium;
+      }
+    }
+
+    .serif-italic {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-style: italic;
+    }
+
+    .pill-mask {
+      border-radius: 200px 200px 0 0;
+    }
+
+    .card-shadow {
+      box-shadow: 0 10px 30px rgba(45, 36, 33, 0.05);
+    }
+
+    .bg-tactile-pattern {
+      position: relative;
+    }
+
+    .bg-tactile-pattern::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.015;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      @apply bg-earth-light;
+    }
+    ::-webkit-scrollbar-thumb {
+      @apply bg-earth-clay/30 rounded;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      @apply bg-earth-clay/50;
+    }
+  </style>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-earth-linen min-h-screen relative font-sans text-earth-dark select-none flex flex-col justify-between">
+
+  <!-- Decorative Warm Top Line -->
+  <div class="h-1.5 w-full bg-gradient-to-r from-earth-clay via-gold-accent to-plum-deep fixed top-0 left-0 z-[100] pointer-events-none"></div>
+
+  <!-- Global Header/Navbar -->
+  <header id="app_header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logo / Brand Name -->
+        <a href="index.html" id="brand_logo_btn" class="group flex items-center space-x-2 text-left focus:outline-none">
+          <span class="flex items-center justify-center w-10 h-10 rounded-full bg-plum-deep text-earth-light font-serif text-lg font-bold">E</span>
+          <div>
+            <span class="block font-serif text-xl tracking-wider uppercase font-semibold text-earth-dark group-hover:text-earth-clay transition-colors">EmbraceIN</span>
+            <span class="block font-sans text-[10px] tracking-widest text-earth-clay uppercase -mt-1 font-medium">Somatic Sanctuary</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a href="index.html" id="nav_link_home" class="relative font-sans text-xs tracking-widest uppercase font-medium text-earth-dark/70 transition-colors hover:text-earth-clay py-1 focus:outline-none">
+            Home
+          </a>
+          <a href="about.html" id="nav_link_about" class="relative font-sans text-xs tracking-widest uppercase font-medium text-earth-dark/70 transition-colors hover:text-earth-clay py-1 focus:outline-none">
+            Our Presence
+          </a>
+          <a href="services.html" id="nav_link_services" class="relative font-sans text-xs tracking-widest uppercase font-semibold text-earth-clay py-1 focus:outline-none">
+            Somatic Offerings
+            <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-earth-clay"></span>
+          </a>
+          <a href="services.html?category=doula-care" id="nav_link_doula-care" class="relative font-sans text-xs tracking-widest uppercase font-medium text-earth-dark/70 transition-colors hover:text-earth-clay py-1 focus:outline-none">
+            Birth & Doula Support
+          </a>
+          <a href="testimonials.html" id="nav_link_testimonials" class="relative font-sans text-xs tracking-widest uppercase font-medium text-earth-dark/70 transition-colors hover:text-earth-clay py-1 focus:outline-none">
+            Shared Stories
+          </a>
+          <a href="faq.html" id="nav_link_faq" class="relative font-sans text-xs tracking-widest uppercase font-medium text-earth-dark/70 transition-colors hover:text-earth-clay py-1 focus:outline-none">
+            Questions
+          </a>
+        </nav>
+
+        <!-- Primary Action Button -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <a href="mailto:bookings@embracein.co.za" id="header_email_link" class="text-xs hover:text-earth-clay text-earth-dark/70 font-mono tracking-tight transition-colors flex items-center gap-1.5">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i> Bookings
+          </a>
+          <a href="tel:+27825550291" id="header_phone_btn" class="flex items-center space-x-2 bg-plum-deep hover:bg-[#201A18] text-earth-light px-4 py-2 rounded-full text-xs tracking-widest uppercase font-medium shadow-md transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-plum-deep">
+            <i data-lucide="phone" class="w-3.5 h-3.5 mr-1"></i>
+            <span>Call Sam</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex lg:hidden">
+          <button id="mobile_menu_toggle_btn" class="text-earth-dark hover:text-earth-clay focus:outline-none p-1 rounded-md">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile_nav_drawer" class="hidden lg:hidden bg-earth-linen border-t border-earth-clay/10 overflow-hidden">
+      <div class="px-4 pt-4 pb-6 space-y-3 shadow-inner">
+        <a href="index.html" class="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider uppercase font-medium text-earth-dark hover:bg-earth-light hover:pl-4 transition-all">
+          Home
+        </a>
+        <a href="about.html" class="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider uppercase font-medium text-earth-dark hover:bg-earth-light hover:pl-4 transition-all">
+          Our Presence
+        </a>
+        <a href="services.html" class="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider uppercase font-bold bg-earth-clay/10 text-earth-clay border-l-4 border-earth-clay">
+          Somatic Offerings
+        </a>
+        <a href="services.html?category=doula-care" class="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider uppercase font-medium text-earth-dark hover:bg-earth-light hover:pl-4 transition-all">
+          Birth & Doula Support
+        </a>
+        <a href="testimonials.html" class="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider uppercase font-medium text-earth-dark hover:bg-earth-light hover:pl-4 transition-all">
+          Shared Stories
+        </a>
+        <a href="faq.html" class="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider uppercase font-medium text-earth-dark hover:bg-earth-light hover:pl-4 transition-all">
+          Questions
+        </a>
+        
+        <!-- Mobile Actions block -->
+        <div class="pt-4 border-t border-earth-clay/10 flex flex-col sm:flex-row gap-3">
+          <a href="mailto:bookings@embracein.co.za" id="mobile_email_btn" class="flex-1 flex items-center justify-center space-x-2 border border-earth-clay/30 hover:border-earth-clay text-earth-dark bg-transparent px-4 py-3 rounded-xl text-xs tracking-widest uppercase font-medium transition-all">
+            <i data-lucide="mail" class="w-4 h-4 text-earth-clay"></i>
+            <span>Email Bookings</span>
+          </a>
+          <a href="tel:+27825550291" id="mobile_phone_btn" class="flex-1 flex items-center justify-center space-x-2 bg-plum-deep hover:bg-[#201A18] text-earth-light px-4 py-3 rounded-xl text-xs tracking-widest uppercase font-medium transition-all shadow-md">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>Call Sam</span>
+          </a>
+        </div>
+        
+        <div class="text-center pt-2">
+          <p class="text-[10px] uppercase tracking-widest text-earth-dark/40 font-mono flex items-center justify-center gap-1">
+            <i data-lucide="sparkles" class="w-3 h-3 text-gold-accent"></i> Beverley, Sandton, Johannesburg
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Frame -->
+  <main class="flex-grow pt-24 pb-12">
+    <section id="services" class="py-20 md:py-28 bg-earth-linen bg-tactile-pattern relative overflow-hidden">
+      <!-- Background Orbs -->
+      <div class="absolute top-1/3 right-0 w-[20%] h-[30%] bg-earth-clay/5 rounded-full filter blur-[100px] pointer-events-none"></div>
+      <div class="absolute bottom-1/3 left-0 w-[25%] h-[35%] bg-plum-deep/5 rounded-full filter blur-[110px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="font-mono text-[10px] tracking-widest uppercase text-earth-clay font-bold block mb-3">
+            Somatic &amp; Guardian Offerings
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-earth-dark mb-4">
+            Embodied Spaces for Deep Transition.
+          </h2>
+          <p class="font-sans text-sm sm:text-base text-earth-dark/75 leading-relaxed max-w-xl mx-auto">
+            We work through the body. Find the specific container that calls to you, whether you are seeking birth advocacy, pelvic reclamation, or a sacred womb-fire gathering.
+          </p>
+          <div class="w-16 h-1 bg-earth-clay mx-auto mt-6 rounded"></div>
+        </div>
+
+        <!-- Category Navigation Tabs -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mb-12 sm:mb-16">
+          <button
+            id="category_tab_doula-care"
+            onclick="switchCategory('doula-care')"
+            class="w-full sm:w-auto px-6 py-4 rounded-xl text-xs sm:text-sm tracking-wider uppercase font-semibold transition-all border text-left sm:text-center flex justify-between sm:justify-center items-center gap-3 focus:outline-none bg-plum-deep border-plum-deep text-earth-light shadow-md font-bold"
+          >
+            <span>Birth & Doula Support</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 sm:hidden rotate-90"></i>
+          </button>
+          <button
+            id="category_tab_yoga-somatics"
+            onclick="switchCategory('yoga-somatics')"
+            class="w-full sm:w-auto px-6 py-4 rounded-xl text-xs sm:text-sm tracking-wider uppercase font-semibold transition-all border text-left sm:text-center flex justify-between sm:justify-center items-center gap-3 focus:outline-none bg-earth-light border-earth-clay/10 text-earth-dark/80 hover:bg-earth-light hover:border-earth-clay/35"
+          >
+            <span>Yoga & Somatic Movement</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 sm:hidden rotate-0"></i>
+          </button>
+          <button
+            id="category_tab_workshops-gatherings"
+            onclick="switchCategory('workshops-gatherings')"
+            class="w-full sm:w-auto px-6 py-4 rounded-xl text-xs sm:text-sm tracking-wider uppercase font-semibold transition-all border text-left sm:text-center flex justify-between sm:justify-center items-center gap-3 focus:outline-none bg-earth-light border-earth-clay/10 text-earth-dark/80 hover:bg-earth-light hover:border-earth-clay/35"
+          >
+            <span>Empowerment & Sacred Circles</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 sm:hidden rotate-0"></i>
+          </button>
+        </div>
+
+        <!-- ---------------------------------------------------- -->
+        <!-- CATEGORY: doula-care -->
+        <!-- ---------------------------------------------------- -->
+        <div id="category_content_doula-care" class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start category-section-content">
+          <!-- Left Column -->
+          <div class="lg:col-span-5 lg:sticky lg:top-24 pt-4">
+            <div class="bg-earth-light border border-earth-clay/10 rounded-2xl p-6 sm:p-8 shadow-sm">
+              <div class="overflow-hidden pill-mask aspect-[16/9] mb-6 border-4 border-white card-shadow bg-earth-light">
+                <img
+                  src="images/doula_support_1780136338126.png"
+                  alt="Birth & Doula Support"
+                  class="w-full h-full object-cover select-none object-center"
+                />
+              </div>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold block mb-2">Core Sanctuary Container</span>
+              <h3 class="font-serif text-2xl font-bold text-earth-dark mb-4">Birth & Doula Support</h3>
+              <p class="font-sans text-sm text-earth-dark/80 leading-relaxed mb-6">
+                Birth is not a clinical procedure to be managed; it is a profound physical, emotional, and spiritual threshold. Our doula services provide steady, unwavering companionship through every phase of this cycle. We do not stand between you and your choices; we bolster your authority, hold the gate, and protect your physical and psychic space so that you can surrender to the power of the passage.
+              </p>
+              <div class="border-t border-earth-clay/10 pt-4 flex items-center gap-3">
+                <i data-lucide="heart-pulse" class="w-5 h-5 text-earth-clay"></i>
+                <span class="font-mono text-[10px] tracking-widest uppercase font-semibold text-earth-dark/70">Fully Trauma-Informed Framework</span>
+              </div>
+            </div>
+            <!-- Quick Contact Prompt Card -->
+            <div class="mt-8 bg-plum-deep text-earth-light rounded-2xl p-6 border border-earth-clay/15 shadow-sm">
+              <h4 class="font-serif text-lg font-bold mb-2">Align With Us first</h4>
+              <p class="font-sans text-xs text-earth-light/80 leading-relaxed mb-4">
+                No automatic online calendars. We connect with intention. Each program begins with a 20-minute phone call or safe herbal tea consultation.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="tel:+27825550291" class="flex items-center justify-center gap-2 bg-earth-clay hover:bg-[#854B35] text-white py-2.5 px-4 rounded-lg text-[10px] uppercase font-bold tracking-widest transition-all">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Call Sam
+                </a>
+                <a href="mailto:bookings@embracein.co.za" class="flex items-center justify-center gap-2 bg-earth-light hover:bg-[#E2D9CE] text-earth-dark py-2.5 px-4 rounded-lg text-[10px] uppercase font-bold tracking-widest transition-all">
+                  <i data-lucide="mail-open" class="w-3.5 h-3.5 text-earth-clay"></i> Email Us
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (Offerings) -->
+          <div class="lg:col-span-7 space-y-6">
+            <h4 class="font-mono text-[10px] tracking-widest uppercase text-earth-clay font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Available Packages &amp; Offerings
+            </h4>
+            <div class="space-y-4">
+              <!-- Offering 1 -->
+              <div class="border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-linen border-earth-clay/15 shadow-sm hover:border-earth-clay/25 hover:shadow">
+                <button id="trigger_doula_0" onclick="toggleAccordion('trigger_doula_0', 'panel_doula_0', 'icon_doula_0')" class="w-full text-left p-6 flex justify-between items-start gap-4 focus:outline-none">
+                  <div class="flex-grow">
+                    <span class="font-serif italic text-xs text-earth-clay block mb-1">Somatic holding for the clinical journey</span>
+                    <h4 class="font-serif text-lg sm:text-xl font-bold text-earth-dark">IVF & Conscious Conception Companioning</h4>
+                    <p class="font-sans text-xs sm:text-sm text-earth-dark/70 mt-1 line-clamp-2">
+                      The IVF path can feel sterile, cold, and profoundly disconnected from the sacred nature of creation. We bring warmth, embodiment, and sacred pacing back to the clinic. We accompany you to appointments, help you navigate hormones somatically, and hold space for the grief, fear, and tender hope that IVF carries.
+                    </p>
+                  </div>
+                  <span id="icon_doula_0" class="w-8 h-8 rounded-full border border-earth-clay/20 flex items-center justify-center text-earth-clay flex-shrink-0 mt-1 transition-transform duration-300 hover:bg-earth-light">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                  </span>
+                </button>
+                <div id="panel_doula_0" class="hidden border-t border-earth-clay/10 bg-earth-linen/80">
+                  <div class="p-6 md:p-8 space-y-6">
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold mb-2 flex items-center gap-1.5"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i> What it physically feels like</h5>
+                      <p class="font-serif italic text-sm text-earth-dark/95 leading-relaxed bg-earth-light p-4 rounded-xl border-l-2 border-earth-clay shadow-inner">
+                        &ldquo;A deep deceleration of the nervous system. Integrating medical checklists with intentional, physical breath anchors and body grounding so your womb remains a sanctuary, not just a clinical host.&rdquo;
+                      </p>
+                    </div>
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3">Program Includes &amp; Covers</h5>
+                      <ul class="space-y-2.5">
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Pre-retrieval and pre-transfer pelvic relaxation sessions</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Accompaniment and advocacy during egg retrievals and transfers in Johannesburg clinics</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Dedicated emotional container for processing the trial-and-error cycles</span></li>
+                      </ul>
+                    </div>
+                    <div class="pt-4 border-t border-earth-clay/10">
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3 flex items-center gap-1.5"><i data-lucide="user-check" class="w-3.5 h-3.5 text-earth-clay"></i> Deeply Suited for</h5>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Women currently navigating or preparing for assisted reproductive technology (IVF, IUI)</span>
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Those experiencing anxiety, dissociation, or loneliness during conception journeys</span>
+                      </div>
+                    </div>
+                    <div class="pt-2 text-right">
+                      <a href="mailto:bookings@embracein.co.za?subject=Inquiry regarding: IVF & Conscious Conception Companioning" class="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest font-bold text-earth-clay hover:text-[#854B35] transition-colors">
+                        Connect about this program <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Offering 2 -->
+              <div class="border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-linen border-earth-clay/15 shadow-sm hover:border-earth-clay/25 hover:shadow">
+                <button id="trigger_doula_1" onclick="toggleAccordion('trigger_doula_1', 'panel_doula_1', 'icon_doula_1')" class="w-full text-left p-6 flex justify-between items-start gap-4 focus:outline-none">
+                  <div class="flex-grow">
+                    <span class="font-serif italic text-xs text-earth-clay block mb-1">Continuous care from seed to sovereign birth</span>
+                    <h4 class="font-serif text-lg sm:text-xl font-bold text-earth-dark">Full-Spectrum Birth Guardianship</h4>
+                    <p class="font-sans text-xs sm:text-sm text-earth-dark/70 mt-1 line-clamp-2">
+                      A complete circle of protection for your pregnancy and delivery. We meet multiple times prenatally to map your fears, write a flexible birth plan, understand your body's pain navigation, and cultivate trust. We reside with you continuously once active labor begins — at home, in hospital, or water birth — anchoring your autonomy throughout.
+                    </p>
+                  </div>
+                  <span id="icon_doula_1" class="w-8 h-8 rounded-full border border-earth-clay/20 flex items-center justify-center text-earth-clay flex-shrink-0 mt-1 transition-transform duration-300 hover:bg-earth-light">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                  </span>
+                </button>
+                <div id="panel_doula_1" class="hidden border-t border-earth-clay/10 bg-earth-linen/80">
+                  <div class="p-6 md:p-8 space-y-6">
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold mb-2 flex items-center gap-1.5"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i> What it physically feels like</h5>
+                      <p class="font-serif italic text-sm text-earth-dark/95 leading-relaxed bg-earth-light p-4 rounded-xl border-l-2 border-earth-clay shadow-inner">
+                        &ldquo;A heavy, warm, physical anchor. A quiet voice pushing past noise, firm hands applying double hip squeezes in the peak of waves, and an unshakeable boundary in the birthing room.&rdquo;
+                      </p>
+                    </div>
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3">Program Includes &amp; Covers</h5>
+                      <ul class="space-y-2.5">
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>3 deep in-person prenatal preparation sessions in Sandton studio/home</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Continuous on-call availability from 37 weeks until birth</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Uninterrupted physical and advocacy support throughout labor and initial skin-to-skin</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Postpartum check-in and birth integration within the first week</span></li>
+                      </ul>
+                    </div>
+                    <div class="pt-4 border-t border-earth-clay/10">
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3 flex items-center gap-1.5"><i data-lucide="user-check" class="w-3.5 h-3.5 text-earth-clay"></i> Deeply Suited for</h5>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">First-time mothers seeking an empowered, autonomous labor experience</span>
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Vaginal Birth After Cesarean (VBAC) seekers needing high Advocacy</span>
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Mothers wanting deep, non-medical pain coping strategies</span>
+                      </div>
+                    </div>
+                    <div class="pt-2 text-right">
+                      <a href="mailto:bookings@embracein.co.za?subject=Inquiry regarding: Full-Spectrum Birth Guardianship" class="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest font-bold text-earth-clay hover:text-[#854B35] transition-colors">
+                        Connect about this program <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Offering 3 -->
+              <div class="border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-linen border-earth-clay/15 shadow-sm hover:border-earth-clay/25 hover:shadow">
+                <button id="trigger_doula_2" onclick="toggleAccordion('trigger_doula_2', 'panel_doula_2', 'icon_doula_2')" class="w-full text-left p-6 flex justify-between items-start gap-4 focus:outline-none">
+                  <div class="flex-grow">
+                    <span class="font-serif italic text-xs text-earth-clay block mb-1">Guarding the rebirth of the mother</span>
+                    <h4 class="font-serif text-lg sm:text-xl font-bold text-earth-dark">The Fourth Trimester: Postpartum Sanctuary</h4>
+                    <p class="font-sans text-xs sm:text-sm text-earth-dark/70 mt-1 line-clamp-2">
+                      When a baby is born, a mother is also born – and she is newborn. We step into your home in the delicate weeks post-birth to mother the mother. Rather than highlighting quick bounce-backs, we support slow integration through nourishing meals, belly wrapping, newborn support, and deep womb rest.
+                    </p>
+                  </div>
+                  <span id="icon_doula_2" class="w-8 h-8 rounded-full border border-earth-clay/20 flex items-center justify-center text-earth-clay flex-shrink-0 mt-1 transition-transform duration-300 hover:bg-earth-light">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                  </span>
+                </button>
+                <div id="panel_doula_2" class="hidden border-t border-earth-clay/10 bg-earth-linen/80">
+                  <div class="p-6 md:p-8 space-y-6">
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold mb-2 flex items-center gap-1.5"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i> What it physically feels like</h5>
+                      <p class="font-serif italic text-sm text-earth-dark/95 leading-relaxed bg-earth-light p-4 rounded-xl border-l-2 border-earth-clay shadow-inner">
+                        &ldquo;The smell of rich warming broths, the physical security of traditional Bengkung belly binding, and a warm, safe hands-off pocket of absolute quiet to sleep, bleed, and heal.&rdquo;
+                      </p>
+                    </div>
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3">Program Includes &amp; Covers</h5>
+                      <ul class="space-y-2.5">
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Ancestral postpartum nutrition: healing soups, teas, and warming porridges cooked in your kitchen</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Traditional postpartum abdominal wrapping (Bengkung or tailored elastic/linen)</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Candid, tender birth story integration sessions to process your delivery process</span></li>
+                      </ul>
+                    </div>
+                    <div class="pt-4 border-t border-earth-clay/10">
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3 flex items-center gap-1.5"><i data-lucide="user-check" class="w-3.5 h-3.5 text-earth-clay"></i> Deeply Suited for</h5>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Mothers wishing to protect the sacred 40-day postpartum window</span>
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Women without local family support in Johannesburg</span>
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Those wanting a trauma-informed recovery after difficult or surgical births</span>
+                      </div>
+                    </div>
+                    <div class="pt-2 text-right">
+                      <a href="mailto:bookings@embracein.co.za?subject=Inquiry regarding: The Fourth Trimester: Postpartum Sanctuary" class="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest font-bold text-earth-clay hover:text-[#854B35] transition-colors">
+                        Connect about this program <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Additional custom local markers -->
+            <p class="font-sans text-[11px] text-earth-dark/40 text-center italic mt-6">
+              All physical bodywork is performed under the protection of certified healthcare guidelines in our Beverley, Sandton studio.
+            </p>
+          </div>
+        </div>
+
+        <!-- ---------------------------------------------------- -->
+        <!-- CATEGORY: yoga-somatics -->
+        <!-- ---------------------------------------------------- -->
+        <div id="category_content_yoga-somatics" class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start category-section-content hidden">
+          <!-- Left Column -->
+          <div class="lg:col-span-5 lg:sticky lg:top-24 pt-4">
+            <div class="bg-earth-light border border-earth-clay/10 rounded-2xl p-6 sm:p-8 shadow-sm">
+              <div class="overflow-hidden pill-mask aspect-[16/9] mb-6 border-4 border-white card-shadow bg-earth-light">
+                <img
+                  src="images/yoga_meditation_1780136360919.png"
+                  alt="Yoga & Somatic Movement"
+                  class="w-full h-full object-cover select-none object-center"
+                />
+              </div>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold block mb-2">Core Sanctuary Container</span>
+              <h3 class="font-serif text-2xl font-bold text-earth-dark mb-4">Yoga & Somatic Movement</h3>
+              <p class="font-sans text-sm text-earth-dark/80 leading-relaxed mb-6">
+                This is not dynamic exercise decorated with spiritual phrasing. Our classes focus on the felt experience from inside the skin. We use specific anatomical sequencing, heavy holds, and heavy sensory tracking to dissolve mental overdrive and anchor you deeply into your bones and womb cavity.
+              </p>
+              <div class="border-t border-earth-clay/10 pt-4 flex items-center gap-3">
+                <i data-lucide="heart-pulse" class="w-5 h-5 text-earth-clay"></i>
+                <span class="font-mono text-[10px] tracking-widest uppercase font-semibold text-earth-dark/70">Fully Trauma-Informed Framework</span>
+              </div>
+            </div>
+            <!-- Quick Contact Prompt Card -->
+            <div class="mt-8 bg-plum-deep text-earth-light rounded-2xl p-6 border border-earth-clay/15 shadow-sm">
+              <h4 class="font-serif text-lg font-bold mb-2">Align With Us first</h4>
+              <p class="font-sans text-xs text-earth-light/80 leading-relaxed mb-4">
+                No automatic online calendars. We connect with intention. Each program begins with a 20-minute phone call or safe herbal tea consultation.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="tel:+27825550291" class="flex items-center justify-center gap-2 bg-earth-clay hover:bg-[#854B35] text-white py-2.5 px-4 rounded-lg text-[10px] uppercase font-bold tracking-widest transition-all">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Call Sam
+                </a>
+                <a href="mailto:bookings@embracein.co.za" class="flex items-center justify-center gap-2 bg-earth-light hover:bg-[#E2D9CE] text-earth-dark py-2.5 px-4 rounded-lg text-[10px] uppercase font-bold tracking-widest transition-all">
+                  <i data-lucide="mail-open" class="w-3.5 h-3.5 text-earth-clay"></i> Email Us
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (Offerings) -->
+          <div class="lg:col-span-7 space-y-6">
+            <h4 class="font-mono text-[10px] tracking-widest uppercase text-earth-clay font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Available Packages &amp; Offerings
+            </h4>
+            <div class="space-y-4">
+              <!-- Offering 1 -->
+              <div class="border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-linen border-earth-clay/15 shadow-sm hover:border-earth-clay/25 hover:shadow">
+                <button id="trigger_yoga_0" onclick="toggleAccordion('trigger_yoga_0', 'panel_yoga_0', 'icon_yoga_0')" class="w-full text-left p-6 flex justify-between items-start gap-4 focus:outline-none">
+                  <div class="flex-grow">
+                    <span class="font-serif italic text-xs text-earth-clay block mb-1">Preparing the physical clay of the body</span>
+                    <h4 class="font-serif text-lg sm:text-xl font-bold text-earth-dark">Prenatal & Sovereign Pregnancy Yoga</h4>
+                    <p class="font-sans text-xs sm:text-sm text-earth-dark/70 mt-1 line-clamp-2">
+                      Movement tailored to build structural stamina, pelvis space, and muscle endurance needed for labor, while releasing the standard physical compression of pregnancy (sciatica, heavy back strain, tight hips). More than pelvic circles, this is an initiation into trusting intense sensory input.
+                    </p>
+                  </div>
+                  <span id="icon_yoga_0" class="w-8 h-8 rounded-full border border-earth-clay/20 flex items-center justify-center text-earth-clay flex-shrink-0 mt-1 transition-transform duration-300 hover:bg-earth-light">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                  </span>
+                </button>
+                <div id="panel_yoga_0" class="hidden border-t border-earth-clay/10 bg-earth-linen/80">
+                  <div class="p-6 md:p-8 space-y-6">
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold mb-2 flex items-center gap-1.5"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i> What it physically feels like</h5>
+                      <p class="font-serif italic text-sm text-earth-dark/95 leading-relaxed bg-earth-light p-4 rounded-xl border-l-2 border-earth-clay shadow-inner">
+                        &ldquo;Grounded standing postures, deep hip opening, and low guttural breath work. Strong but spacious, physical, and highly stabilizing.&rdquo;
+                      </p>
+                    </div>
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3">Program Includes &amp; Covers</h5>
+                      <ul class="space-y-2.5">
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Pelvic floor release and containment techniques</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Anatomical posturing to encourage optimal fetal positioning (optimal spinning babies)</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Labor breathing practices integrated directly into strong, physical holds</span></li>
+                      </ul>
+                    </div>
+                    <div class="pt-4 border-t border-earth-clay/10">
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3 flex items-center gap-1.5"><i data-lucide="user-check" class="w-3.5 h-3.5 text-earth-clay"></i> Deeply Suited for</h5>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Pregnant women from 12 weeks to birth trying to find comfort inside their changes</span>
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Mothers wanting to train their nervous system to stay quiet under heavy physical stimulation</span>
+                      </div>
+                    </div>
+                    <div class="pt-2 text-right">
+                      <a href="mailto:bookings@embracein.co.za?subject=Inquiry regarding: Prenatal & Sovereign Pregnancy Yoga" class="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest font-bold text-earth-clay hover:text-[#854B35] transition-colors">
+                        Connect about this program <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Offering 2 -->
+              <div class="border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-linen border-earth-clay/15 shadow-sm hover:border-earth-clay/25 hover:shadow">
+                <button id="trigger_yoga_1" onclick="toggleAccordion('trigger_yoga_1', 'panel_yoga_1', 'icon_yoga_1')" class="w-full text-left p-6 flex justify-between items-start gap-4 focus:outline-none">
+                  <div class="flex-grow">
+                    <span class="font-serif italic text-xs text-earth-clay block mb-1">Reconnecting to the core seat of power</span>
+                    <h4 class="font-serif text-lg sm:text-xl font-bold text-earth-dark">Yoni & Somatic Pelvic Reclamation</h4>
+                    <p class="font-sans text-xs sm:text-sm text-earth-dark/70 mt-1 line-clamp-2">
+                      A class focused purely on the pelvic bowl, womb space, and lower root. Combining somatic intuitive shaking, pelvic floor mapping, and myofascial release, this practice helps dissolve physical armor, chronic tension, and stored reproductive tracking or traumas. We hold space for the raw, real feminine current to circulate without shame.
+                    </p>
+                  </div>
+                  <span id="icon_yoga_1" class="w-8 h-8 rounded-full border border-earth-clay/20 flex items-center justify-center text-earth-clay flex-shrink-0 mt-1 transition-transform duration-300 hover:bg-earth-light">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                  </span>
+                </button>
+                <div id="panel_yoga_1" class="hidden border-t border-earth-clay/10 bg-earth-linen/80">
+                  <div class="p-6 md:p-8 space-y-6">
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold mb-2 flex items-center gap-1.5"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i> What it physically feels like</h5>
+                      <p class="font-serif italic text-sm text-earth-dark/95 leading-relaxed bg-earth-light p-4 rounded-xl border-l-2 border-earth-clay shadow-inner">
+                        &ldquo;Quiet, heavy, tactile exploration. Slower floor-based sequencing, physical pelvic tilts, and internal resonance tracking that moves past static mind chatter.&rdquo;
+                      </p>
+                    </div>
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3">Program Includes &amp; Covers</h5>
+                      <ul class="space-y-2.5">
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Pelvic floor tension mapping and somatic release</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Womb-heart connection flow mapping</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Intuitive breathing and nervous system soft-drops</span></li>
+                      </ul>
+                    </div>
+                    <div class="pt-4 border-t border-earth-clay/10">
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3 flex items-center gap-1.5"><i data-lucide="user-check" class="w-3.5 h-3.5 text-earth-clay"></i> Deeply Suited for</h5>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Women struggling with sexual dissociation, pelvic pain, or lack of bodily vital sensation</span>
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Those navigating postpartum scar tissue, menopause, or fertility grief</span>
+                      </div>
+                    </div>
+                    <div class="pt-2 text-right">
+                      <a href="mailto:bookings@embracein.co.za?subject=Inquiry regarding: Yoni & Somatic Pelvic Reclamation" class="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest font-bold text-earth-clay hover:text-[#854B35] transition-colors">
+                        Connect about this program <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Offering 3 -->
+              <div class="border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-linen border-earth-clay/15 shadow-sm hover:border-earth-clay/25 hover:shadow">
+                <button id="trigger_yoga_2" onclick="toggleAccordion('trigger_yoga_2', 'panel_yoga_2', 'icon_yoga_2')" class="w-full text-left p-6 flex justify-between items-start gap-4 focus:outline-none">
+                  <div class="flex-grow">
+                    <span class="font-serif italic text-xs text-earth-clay block mb-1">Surrender to the absolute pull of gravity</span>
+                    <h4 class="font-serif text-lg sm:text-xl font-bold text-earth-dark">Restorative Somatic Drop & Sound Alchemy</h4>
+                    <p class="font-sans text-xs sm:text-sm text-earth-dark/70 mt-1 line-clamp-2">
+                      The ultimate container for high-functioning, chronically exhausted women. We use heavy bolsters, physical wool blankets, and weights to support the body in passive postures for long periods, combined with low-frequency quartz and tibetan bowl sound therapy to trigger cell-level rest.
+                    </p>
+                  </div>
+                  <span id="icon_yoga_2" class="w-8 h-8 rounded-full border border-earth-clay/20 flex items-center justify-center text-earth-clay flex-shrink-0 mt-1 transition-transform duration-300 hover:bg-earth-light">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                  </span>
+                </button>
+                <div id="panel_yoga_2" class="hidden border-t border-earth-clay/10 bg-earth-linen/80">
+                  <div class="p-6 md:p-8 space-y-6">
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold mb-2 flex items-center gap-1.5"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i> What it physically feels like</h5>
+                      <p class="font-serif italic text-sm text-earth-dark/95 leading-relaxed bg-earth-light p-4 rounded-xl border-l-2 border-earth-clay shadow-inner">
+                        &ldquo;The complete release of holding yourself up. Weightless yet incredibly heavy; a velvet-like darkness of deep resonance and deep restoration.&rdquo;
+                      </p>
+                    </div>
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3">Program Includes &amp; Covers</h5>
+                      <ul class="space-y-2.5">
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Acoustic resonant sound therapy with deep somatic grounding</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Extended bolsters, heavy cotton sandbags, and warm weighted blankets</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Vagal system down-regulation and deep deep sleep trigger</span></li>
+                      </ul>
+                    </div>
+                    <div class="pt-4 border-t border-earth-clay/10">
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3 flex items-center gap-1.5"><i data-lucide="user-check" class="w-3.5 h-3.5 text-earth-clay"></i> Deeply Suited for</h5>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Women dealing with adrenal fatigue, burnout, or chronic system hyper-vigilance</span>
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Those who find 'sitting quiet' triggers severe restlessness</span>
+                      </div>
+                    </div>
+                    <div class="pt-2 text-right">
+                      <a href="mailto:bookings@embracein.co.za?subject=Inquiry regarding: Restorative Somatic Drop & Sound Alchemy" class="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest font-bold text-earth-clay hover:text-[#854B35] transition-colors">
+                        Connect about this program <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Additional custom local markers -->
+            <p class="font-sans text-[11px] text-earth-dark/40 text-center italic mt-6">
+              All physical bodywork is performed under the protection of certified healthcare guidelines in our Beverley, Sandton studio.
+            </p>
+          </div>
+        </div>
+
+        <!-- ---------------------------------------------------- -->
+        <!-- CATEGORY: workshops-gatherings -->
+        <!-- ---------------------------------------------------- -->
+        <div id="category_content_workshops-gatherings" class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start category-section-content hidden">
+          <!-- Left Column -->
+          <div class="lg:col-span-5 lg:sticky lg:top-24 pt-4">
+            <div class="bg-earth-light border border-earth-clay/10 rounded-2xl p-6 sm:p-8 shadow-sm">
+              <div class="overflow-hidden pill-mask aspect-[16/9] mb-6 border-4 border-white card-shadow bg-earth-light">
+                <img
+                  src="images/community_circle_1780136382664.png"
+                  alt="Empowerment & Sacred Circles"
+                  class="w-full h-full object-cover select-none object-center"
+                />
+              </div>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold block mb-2">Core Sanctuary Container</span>
+              <h3 class="font-serif text-2xl font-bold text-earth-dark mb-4">Empowerment & Sacred Circles</h3>
+              <p class="font-sans text-sm text-earth-dark/80 leading-relaxed mb-6">
+                When women gather intentionally, they step outside of linear time. Our workshops and circles in Beverley are sacred, heavy containers to celebrate, grieve, and mark life transitions. No superficial socializing — we gather to look each other in the eye, speak actual truth, and hold the thread of dynamic community support.
+              </p>
+              <div class="border-t border-earth-clay/10 pt-4 flex items-center gap-3">
+                <i data-lucide="heart-pulse" class="w-5 h-5 text-earth-clay"></i>
+                <span class="font-mono text-[10px] tracking-widest uppercase font-semibold text-earth-dark/70">Fully Trauma-Informed Framework</span>
+              </div>
+            </div>
+            <!-- Quick Contact Prompt Card -->
+            <div class="mt-8 bg-plum-deep text-earth-light rounded-2xl p-6 border border-earth-clay/15 shadow-sm">
+              <h4 class="font-serif text-lg font-bold mb-2">Align With Us first</h4>
+              <p class="font-sans text-xs text-earth-light/80 leading-relaxed mb-4">
+                No automatic online calendars. We connect with intention. Each program begins with a 20-minute phone call or safe herbal tea consultation.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="tel:+27825550291" class="flex items-center justify-center gap-2 bg-earth-clay hover:bg-[#854B35] text-white py-2.5 px-4 rounded-lg text-[10px] uppercase font-bold tracking-widest transition-all">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Call Sam
+                </a>
+                <a href="mailto:bookings@embracein.co.za" class="flex items-center justify-center gap-2 bg-earth-light hover:bg-[#E2D9CE] text-earth-dark py-2.5 px-4 rounded-lg text-[10px] uppercase font-bold tracking-widest transition-all">
+                  <i data-lucide="mail-open" class="w-3.5 h-3.5 text-earth-clay"></i> Email Us
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (Offerings) -->
+          <div class="lg:col-span-7 space-y-6">
+            <h4 class="font-mono text-[10px] tracking-widest uppercase text-earth-clay font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Available Packages &amp; Offerings
+            </h4>
+            <div class="space-y-4">
+              <!-- Offering 1 -->
+              <div class="border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-linen border-earth-clay/15 shadow-sm hover:border-earth-clay/25 hover:shadow">
+                <button id="trigger_gather_0" onclick="toggleAccordion('trigger_gather_0', 'panel_gather_0', 'icon_gather_0')" class="w-full text-left p-6 flex justify-between items-start gap-4 focus:outline-none">
+                  <div class="flex-grow">
+                    <span class="font-serif italic text-xs text-earth-clay block mb-1">Grounded thresholds to sync and release</span>
+                    <h4 class="font-serif text-lg sm:text-xl font-bold text-earth-dark">Monthly Womb & Moon Fire Circles</h4>
+                    <p class="font-sans text-xs sm:text-sm text-earth-dark/70 mt-1 line-clamp-2">
+                      An intentional monthly gathering under the dark or full moon. Designed for women who seek raw sisterhood, ritual pacing, and a sacred container to speak unedited truth. We run somatic release exercises, guided visualization, and share open, confidential conversations around the fire.
+                    </p>
+                  </div>
+                  <span id="icon_gather_0" class="w-8 h-8 rounded-full border border-earth-clay/20 flex items-center justify-center text-earth-clay flex-shrink-0 mt-1 transition-transform duration-300 hover:bg-earth-light">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                  </span>
+                </button>
+                <div id="panel_gather_0" class="hidden border-t border-earth-clay/10 bg-earth-linen/80">
+                  <div class="p-6 md:p-8 space-y-6">
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold mb-2 flex items-center gap-1.5"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i> What it physically feels like</h5>
+                      <p class="font-serif italic text-sm text-earth-dark/95 leading-relaxed bg-earth-light p-4 rounded-xl border-l-2 border-earth-clay shadow-inner">
+                        &ldquo;Warm fireplace embers, scent of hand-pressed resins, collective deep breathing, and the unparalleled weight of shared unmasked truth.&rdquo;
+                      </p>
+                    </div>
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3">Program Includes &amp; Covers</h5>
+                      <ul class="space-y-2.5">
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Herbal tea ceremony and intentional somatic check-ins</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Somatic ritualized release ceremonies</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Uncensored sharing circle held under strict, secure confidentiality contracts</span></li>
+                      </ul>
+                    </div>
+                    <div class="pt-4 border-t border-earth-clay/10">
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3 flex items-center gap-1.5"><i data-lucide="user-check" class="w-3.5 h-3.5 text-earth-clay"></i> Deeply Suited for</h5>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Women seeking deep, local community and non-clinical emotional support</span>
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Those wanting a spiritual practice that respects their physical cyclical nature</span>
+                      </div>
+                    </div>
+                    <div class="pt-2 text-right">
+                      <a href="mailto:bookings@embracein.co.za?subject=Inquiry regarding: Monthly Womb & Moon Fire Circles" class="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest font-bold text-earth-clay hover:text-[#854B35] transition-colors">
+                        Connect about this program <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Offering 2 -->
+              <div class="border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-linen border-earth-clay/15 shadow-sm hover:border-earth-clay/25 hover:shadow">
+                <button id="trigger_gather_1" onclick="toggleAccordion('trigger_gather_1', 'panel_gather_1', 'icon_gather_1')" class="w-full text-left p-6 flex justify-between items-start gap-4 focus:outline-none">
+                  <div class="flex-grow">
+                    <span class="font-serif italic text-xs text-earth-clay block mb-1">Rewriting the pelvic story for the next generation</span>
+                    <h4 class="font-serif text-lg sm:text-xl font-bold text-earth-dark">Sovereign First Menstruation (Menarche) & Teen Circles</h4>
+                    <p class="font-sans text-xs sm:text-sm text-earth-dark/70 mt-1 line-clamp-2">
+                      A workshop design for young girls (ages 10-14) navigating their first bloods. We teach anatomical sovereignty, physical cycle respect, and self-advocacy in an atmosphere that celebrates bodily transitions with warmth, beauty, and absolute support, far from clinical dryness or school shame.
+                    </p>
+                  </div>
+                  <span id="icon_gather_1" class="w-8 h-8 rounded-full border border-earth-clay/20 flex items-center justify-center text-earth-clay flex-shrink-0 mt-1 transition-transform duration-300 hover:bg-earth-light">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                  </span>
+                </button>
+                <div id="panel_gather_1" class="hidden border-t border-earth-clay/10 bg-earth-linen/80">
+                  <div class="p-6 md:p-8 space-y-6">
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-clay font-bold mb-2 flex items-center gap-1.5"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i> What it physically feels like</h5>
+                      <p class="font-serif italic text-sm text-earth-dark/95 leading-relaxed bg-earth-light p-4 rounded-xl border-l-2 border-earth-clay shadow-inner">
+                        &ldquo;Soft, artistic, holding. Beautiful flowers, simple warm crafts, tactile guidance, and an absolute feeling of belonging and protection.&rdquo;
+                      </p>
+                    </div>
+                    <div>
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3">Program Includes &amp; Covers</h5>
+                      <ul class="space-y-2.5">
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Anatomy of wonder: physical explanation of menstrual phases and cycles with fabric models</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Introduction to sustainable pelvic hygiene with somatic sensory choice</span></li>
+                        <li class="flex items-start gap-2 text-xs sm:text-sm text-earth-dark/85"><i data-lucide="check-circle" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i> <span>Parent-child connection ceremony to celebrate the threshold</span></li>
+                      </ul>
+                    </div>
+                    <div class="pt-4 border-t border-earth-clay/10">
+                      <h5 class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-bold mb-3 flex items-center gap-1.5"><i data-lucide="user-check" class="w-3.5 h-3.5 text-earth-clay"></i> Deeply Suited for</h5>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Young girls approaching or who have just entered menarche</span>
+                        <span class="bg-earth-clay/10 border border-earth-clay/20 text-earth-dark rounded-full px-3 py-1 text-[11px] font-sans font-medium">Parents looking for a sacred, grounded way to initiate their daughters into feminine cyclical health</span>
+                      </div>
+                    </div>
+                    <div class="pt-2 text-right">
+                      <a href="mailto:bookings@embracein.co.za?subject=Inquiry regarding: Sovereign First Menstruation (Menarche) & Teen Circles" class="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest font-bold text-earth-clay hover:text-[#854B35] transition-colors">
+                        Connect about this program <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Additional custom local markers -->
+            <p class="font-sans text-[11px] text-earth-dark/40 text-center italic mt-6">
+              All physical bodywork is performed under the protection of certified healthcare guidelines in our Beverley, Sandton studio.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact Deck & Sensory Footer -->
+  <footer id="contact" class="bg-[#1C1816] py-20 px-4 sm:px-6 lg:px-8 border-t border-earth-clay/10 relative overflow-hidden text-earth-light">
+    <!-- Mystical Background Highlights -->
+    <div class="absolute top-0 right-0 w-[30%] h-[40%] bg-earth-clay/10 rounded-full filter blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[20%] h-[30%] bg-earth-clay/5 rounded-full filter blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <!-- Top Section - Large Callout and Action Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-white/10">
+        
+        <!-- Brand Signature -->
+        <div class="lg:col-span-5">
+          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-earth-clay text-earth-light font-serif text-xl font-bold mb-4">E</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold uppercase tracking-widest text-earth-clay">EmbraceIN</h3>
+          <span class="block font-mono text-[10px] tracking-widest uppercase text-gold-accent font-semibold mt-1">Somatic Sanctuary &amp; Birth Guardianship</span>
+          <p class="font-sans text-xs sm:text-sm text-earth-light/65 leading-relaxed mt-6 max-w-sm">
+            We stand at the threshold with you. Offering birth doula care, trauma-informed pelvic yoga, women's circles, and somatic sound treatments in Beverley, Sandton, Johannesburg.
+          </p>
+          
+          <div class="mt-8 flex items-center gap-2 text-xs text-earth-clay font-mono tracking-wider uppercase font-bold">
+            <i data-lucide="sparkles" class="w-4 h-4 text-gold-accent"></i>
+            <span>Beverley, Sandton, Johannesburg</span>
+          </div>
+        </div>
+
+        <!-- Contact Actions -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
+          
+          <!-- Phone Card -->
+          <a href="tel:+27825550291" id="footer_phone_card" class="group block p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-earth-clay hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
+            <div class="w-10 h-10 rounded-xl bg-earth-clay/20 flex items-center justify-center mb-4 text-earth-clay group-hover:bg-earth-clay group-hover:text-white transition-all">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </div>
+            <span class="font-mono text-[9px] uppercase tracking-widest text-gold-accent block mb-1">Call Samantha Directly</span>
+            <h4 class="font-serif text-xl font-bold group-hover:text-earth-clay transition-colors mb-2">+27 (0) 82 555 0291</h4>
+            <p class="font-sans text-xs text-white/50 leading-relaxed">
+              For urgent birth enquiries, labor calls, or to set up an initial consultation conversation.
+            </p>
+          </a>
+
+          <!-- Email Card -->
+          <a href="mailto:bookings@embracein.co.za?subject=Enquiry from EmbraceIN Website" id="footer_email_card" class="group block p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-earth-clay hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
+            <div class="w-10 h-10 rounded-xl bg-[#2D2421]/50 border border-[#2D2421]/10 flex items-center justify-center mb-4 text-gold-accent group-hover:bg-gold-accent group-hover:text-[#1C1816] transition-all">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <span class="font-mono text-[9px] uppercase tracking-widest text-gold-accent block mb-1">Email Our Booking Team</span>
+            <h4 class="font-serif text-xl font-bold group-hover:text-gold-accent transition-colors mb-2">bookings@embracein.co.za</h4>
+            <p class="font-sans text-xs text-white/50 leading-relaxed">
+              For yoga class bookings, workshop registration, or pelvic somatics questions.
+            </p>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Bottom Section - Logistics, Team Directory, and Copyright -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pt-12 text-sm text-white/60">
+        
+        <!-- Service Logistics -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="font-serif text-base font-bold text-white uppercase tracking-wider">Sanctum Logistics</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i>
+              <span>Our physical studio is situated in Beverley, Sandton, JHB (next to lonehill and Dainfern). Available by appointment.</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-gold-accent flex-shrink-0"></i>
+              <span>Studio hours: Weekdays 07:00 – 19:00, Saturdays 08:00 – 13:00. Closed Sundays.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="calendar" class="w-4 h-4 text-earth-clay flex-shrink-0 mt-0.5"></i>
+              <span>Continuous 24/7 on-call availability for contracted birth doula clients.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Team Reference -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="font-serif text-base font-bold text-white uppercase tracking-wider">The Guardians</h4>
+          <ul class="space-y-2 text-xs">
+            <li class="flex justify-between border-b border-white/5 pb-2">
+              <span class="font-semibold text-white/80">Samantha-Lee Barker</span>
+              <span class="italic text-earth-clay">Founder, Lead Doula</span>
+            </li>
+            <li class="flex justify-between border-b border-white/5 pb-2">
+              <span class="font-semibold text-white/80">Lerato Sibanda</span>
+              <span class="italic text-gold-accent">Postpartum Specialist</span>
+            </li>
+            <li class="flex justify-between pb-2">
+              <span class="font-semibold text-white/80">Chloe van der Merwe</span>
+              <span class="italic text-gold-accent">Bodyworker</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Duty of Care -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="font-serif text-base font-bold text-white uppercase tracking-wider">Duty of Care</h4>
+          <p class="font-sans text-xs leading-relaxed text-white/40">
+            Doulas are non-clinical emotional and physical companion guides. We work in alignment with certified medical teams (obstetricians, midwives, gynecologists, pediatrician). We do not perform clinical diagnostics or medical deliveries.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-xs text-white/35 gap-4">
+        <p>© 2026 EmbraceIN. All rights reserved. Beverley, Sandton, Johannesburg.</p>
+        <div class="flex items-center gap-1">
+          <span>Holding sacred container for Johannesburg women</span>
+          <i data-lucide="heart" class="w-3.5 h-3.5 text-earth-clay fill-current"></i>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Scroll to Top Target -->
+  <button id="scroll_to_top_floating_btn" class="hidden fixed bottom-6 right-6 z-40 bg-plum-deep hover:bg-[#201A18] hover:scale-105 text-earth-light w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-plum-deep" title="Scroll back up into stillness">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Location Indicator -->
+  <div class="hidden md:flex fixed bottom-6 left-6 z-40 bg-earth-linen/90 backdrop-blur-md border border-earth-clay/15 rounded-full px-4 py-2 shadow-md items-center gap-2">
+    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-earth-clay"></i>
+    <span class="font-mono text-[9px] uppercase tracking-widest text-earth-dark/70 font-semibold">Beverley, Sandton</span>
+    <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span>
+  </div>
+
+  <!-- JavaScript logic specific to category tabs & accordions -->
+  <script>
+    // Tab switching functionality
+    function switchCategory(catId) {
+      // 1. Hide all category sections
+      const sections = document.querySelectorAll(".category-section-content");
+      sections.forEach(sec => sec.classList.add("hidden"));
+
+      // 2. Show active category section
+      const activeSection = document.getElementById("category_content_" + catId);
+      if (activeSection) {
+        activeSection.classList.remove("hidden");
+      }
+
+      // 3. Reset tab buttons style
+      const tabIds = ["doula-care", "yoga-somatics", "workshops-gatherings"];
+      tabIds.forEach(id => {
+        const btn = document.getElementById("category_tab_" + id);
+        if (btn) {
+          if (id === catId) {
+            btn.className = "w-full sm:w-auto px-6 py-4 rounded-xl text-xs sm:text-sm tracking-wider uppercase font-semibold transition-all border text-left sm:text-center flex justify-between sm:justify-center items-center gap-3 focus:outline-none bg-plum-deep border-plum-deep text-earth-light shadow-md font-bold";
+            const chevron = btn.querySelector("i");
+            if (chevron) {
+              chevron.classList.add("rotate-90");
+              chevron.classList.remove("rotate-0");
+            }
+          } else {
+            btn.className = "w-full sm:w-auto px-6 py-4 rounded-xl text-xs sm:text-sm tracking-wider uppercase font-semibold transition-all border text-left sm:text-center flex justify-between sm:justify-center items-center gap-3 focus:outline-none bg-earth-light border-earth-clay/10 text-earth-dark/80 hover:bg-earth-light hover:border-earth-clay/35";
+            const chevron = btn.querySelector("i");
+            if (chevron) {
+              chevron.classList.remove("rotate-90");
+              chevron.classList.add("rotate-0");
+            }
+          }
+        }
+      });
+    }
+
+    // Accordion functionality
+    function toggleAccordion(triggerId, panelId, iconId) {
+      const panel = document.getElementById(panelId);
+      const icon = document.getElementById(iconId);
+      const trigger = document.getElementById(triggerId);
+      if (panel && icon) {
+        const isCollapsed = panel.classList.contains("hidden");
+        if (isCollapsed) {
+          panel.classList.remove("hidden");
+          icon.classList.add("rotate-90", "bg-earth-clay", "text-earth-linen");
+          icon.classList.remove("hover:bg-earth-light");
+          const card = trigger.closest(".border");
+          card.className = "border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-light border-earth-clay/35 shadow-md scale-[1.01]";
+        } else {
+          panel.classList.add("hidden");
+          icon.classList.remove("rotate-90", "bg-earth-clay", "text-earth-linen");
+          icon.classList.add("hover:bg-earth-light");
+          const card = trigger.closest(".border");
+          card.className = "border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-linen border-earth-clay/15 shadow-sm hover:border-earth-clay/25 hover:shadow";
+        }
+      }
+    }
+
+    // Run tab pre-selection based on URL query parameter (?category=...)
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const categoryParam = urlParams.get("category");
+      if (categoryParam) {
+        if (["doula-care", "yoga-somatics", "workshops-gatherings"].includes(categoryParam)) {
+          switchCategory(categoryParam);
+        }
+      }
+    });
+  </script>
+
+  <!-- Shared JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
