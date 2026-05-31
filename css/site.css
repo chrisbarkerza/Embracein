@@ -1,0 +1,31 @@
+.static-background-logo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  margin-top: -96px;
+  margin-right: -96px;
+  opacity: 0.105;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+
+.static-background-logo__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 640px) {
+  .static-background-logo {
+    width: 450px;
+  }
+}
+
+@media (min-width: 768px) {
+  .static-background-logo {
+    width: 600px;
+  }
+}

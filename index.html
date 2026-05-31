@@ -84,11 +84,12 @@
       @apply bg-earth-clay/50;
     }
   </style>
+  <link rel="stylesheet" href="css/site.css">
 
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-earth-linen min-h-screen relative font-sans text-earth-dark select-none flex flex-col justify-between">
+<body class="bg-earth-light min-h-screen relative font-sans text-earth-dark select-none flex flex-col justify-between">
 
   <!-- Decorative Warm Top Line -->
   <div class="h-1.5 w-full bg-gradient-to-r from-earth-clay via-gold-accent to-plum-deep fixed top-0 left-0 z-[100] pointer-events-none"></div>
@@ -128,17 +129,6 @@
           </a>
         </nav>
 
-        <!-- Primary Action Button -->
-        <div class="hidden lg:flex items-center space-x-4">
-          <a href="mailto:bookings@embracein.co.za" id="header_email_link" class="text-xs hover:text-earth-clay text-earth-dark/70 font-mono tracking-tight transition-colors flex items-center gap-1.5">
-            <i data-lucide="mail" class="w-3.5 h-3.5"></i> Bookings
-          </a>
-          <a href="tel:+27825550291" id="header_phone_btn" class="flex items-center space-x-2 bg-plum-deep hover:bg-[#201A18] text-earth-light px-4 py-2 rounded-full text-xs tracking-widest uppercase font-medium shadow-md transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-plum-deep">
-            <i data-lucide="phone" class="w-3.5 h-3.5 mr-1"></i>
-            <span>Call Sam</span>
-          </a>
-        </div>
-
         <!-- Mobile Menu Button -->
         <div class="flex lg:hidden">
           <button id="mobile_menu_toggle_btn" class="text-earth-dark hover:text-earth-clay focus:outline-none p-1 rounded-md">
@@ -167,18 +157,6 @@
         <a href="faq.html" class="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider uppercase font-medium text-earth-dark hover:bg-earth-light hover:pl-4 transition-all">
           Questions
         </a>
-        
-        <!-- Mobile Actions block -->
-        <div class="pt-4 border-t border-earth-clay/10 flex flex-col sm:flex-row gap-3">
-          <a href="mailto:bookings@embracein.co.za" id="mobile_email_btn" class="flex-1 flex items-center justify-center space-x-2 border border-earth-clay/30 hover:border-earth-clay text-earth-dark bg-transparent px-4 py-3 rounded-xl text-xs tracking-widest uppercase font-medium transition-all">
-            <i data-lucide="mail" class="w-4 h-4 text-earth-clay"></i>
-            <span>Email Bookings</span>
-          </a>
-          <a href="tel:+27825550291" id="mobile_phone_btn" class="flex-1 flex items-center justify-center space-x-2 bg-plum-deep hover:bg-[#201A18] text-earth-light px-4 py-3 rounded-xl text-xs tracking-widest uppercase font-medium transition-all shadow-md">
-            <i data-lucide="phone" class="w-4 h-4"></i>
-            <span>Call Sam</span>
-          </a>
-        </div>
         
         <div class="text-center pt-2">
           <p class="text-[10px] uppercase tracking-widest text-earth-dark/40 font-mono flex items-center justify-center gap-1">

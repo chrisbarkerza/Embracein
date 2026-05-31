@@ -1,6 +1,21 @@
 // Shared client-side logic for EmbraceIN static site
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Shared static background logo watermark.
+  if (!document.getElementById("static_background_logo")) {
+    const watermark = document.createElement("div");
+    watermark.id = "static_background_logo";
+    watermark.className = "static-background-logo";
+
+    const logo = document.createElement("img");
+    logo.src = "images/logo.svg";
+    logo.alt = "";
+    logo.className = "static-background-logo__image";
+
+    watermark.appendChild(logo);
+    document.body.prepend(watermark);
+  }
+
   // Initialize Lucide Icons
   if (typeof lucide !== "undefined") {
     lucide.createIcons();
