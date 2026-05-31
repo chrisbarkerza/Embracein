@@ -99,8 +99,8 @@
       <div class="flex items-center justify-between">
         
         <!-- Logo / Brand Name -->
-        <a href="index.html" id="brand_logo_btn" class="group flex items-center space-x-2 text-left focus:outline-none">
-          <span class="flex items-center justify-center w-10 h-10 rounded-full bg-plum-deep text-earth-light font-serif text-lg font-bold">E</span>
+        <a href="index.html" id="brand_logo_btn" class="group flex items-center space-x-3 text-left focus:outline-none">
+          <img src="images/logo.svg" alt="EmbraceIN Logo" class="w-10 h-10 object-contain transition-transform group-hover:scale-105" />
           <div>
             <span class="block font-serif text-xl tracking-wider uppercase font-semibold text-earth-dark group-hover:text-earth-clay transition-colors">EmbraceIN</span>
             <span class="block font-sans text-[10px] tracking-widest text-earth-clay uppercase -mt-1 font-medium">Somatic Sanctuary</span>
@@ -118,9 +118,7 @@
           <a href="services.html" id="nav_link_services" class="relative font-sans text-xs tracking-widest uppercase font-medium text-earth-dark/70 transition-colors hover:text-earth-clay py-1 focus:outline-none">
             Somatic Offerings
           </a>
-          <a href="services.html?category=doula-care" id="nav_link_doula-care" class="relative font-sans text-xs tracking-widest uppercase font-medium text-earth-dark/70 transition-colors hover:text-earth-clay py-1 focus:outline-none">
-            Birth & Doula Support
-          </a>
+
           <a href="testimonials.html" id="nav_link_testimonials" class="relative font-sans text-xs tracking-widest uppercase font-medium text-earth-dark/70 transition-colors hover:text-earth-clay py-1 focus:outline-none">
             Shared Stories
           </a>
@@ -162,9 +160,7 @@
         <a href="services.html" class="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider uppercase font-medium text-earth-dark hover:bg-earth-light hover:pl-4 transition-all">
           Somatic Offerings
         </a>
-        <a href="services.html?category=doula-care" class="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider uppercase font-medium text-earth-dark hover:bg-earth-light hover:pl-4 transition-all">
-          Birth & Doula Support
-        </a>
+
         <a href="testimonials.html" class="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider uppercase font-medium text-earth-dark hover:bg-earth-light hover:pl-4 transition-all">
           Shared Stories
         </a>
@@ -216,37 +212,7 @@
           <div class="w-16 h-1 bg-earth-clay mx-auto mt-6 rounded"></div>
         </div>
 
-        <!-- FAQ Tabs -->
-        <div class="flex flex-wrap justify-center gap-2 mb-12 border-b border-earth-clay/10 pb-6">
-          <button
-            id="faq_tab_all"
-            onclick="filterFaqs('all')"
-            class="px-4.5 py-2.5 rounded-full text-xs tracking-wider uppercase font-semibold transition-all border bg-earth-clay border-earth-clay text-earth-light shadow-sm"
-          >
-            All Questions
-          </button>
-          <button
-            id="faq_tab_doula"
-            onclick="filterFaqs('doula')"
-            class="px-4.5 py-2.5 rounded-full text-xs tracking-wider uppercase font-semibold transition-all border bg-earth-light border-earth-clay/15 text-earth-dark/75 hover:bg-earth-light hover:border-earth-clay/30"
-          >
-            Birth & Doula Support
-          </button>
-          <button
-            id="faq_tab_yoga"
-            onclick="filterFaqs('yoga')"
-            class="px-4.5 py-2.5 rounded-full text-xs tracking-wider uppercase font-semibold transition-all border bg-earth-light border-earth-clay/15 text-earth-dark/75 hover:bg-earth-light hover:border-earth-clay/30"
-          >
-            Yoga & Pelvic Somatics
-          </button>
-          <button
-            id="faq_tab_booking"
-            onclick="filterFaqs('booking')"
-            class="px-4.5 py-2.5 rounded-full text-xs tracking-wider uppercase font-semibold transition-all border bg-earth-light border-earth-clay/15 text-earth-dark/75 hover:bg-earth-light hover:border-earth-clay/30"
-          >
-            Consultation & Booking
-          </button>
-        </div>
+
 
         <!-- Accordion Questions List -->
         <div class="space-y-4">
@@ -414,7 +380,7 @@
         
         <!-- Brand Signature -->
         <div class="lg:col-span-5">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-earth-clay text-earth-light font-serif text-xl font-bold mb-4">E</span>
+          <img src="images/logo.svg" alt="EmbraceIN Logo" class="w-12 h-12 object-contain mb-4 invert opacity-90" />
           <h3 class="font-serif text-2xl sm:text-3xl font-bold uppercase tracking-widest text-earth-clay">EmbraceIN</h3>
           <span class="block font-mono text-[10px] tracking-widest uppercase text-gold-accent font-semibold mt-1">Somatic Sanctuary &amp; Birth Guardianship</span>
           <p class="font-sans text-xs sm:text-sm text-earth-light/65 leading-relaxed mt-6 max-w-sm">
@@ -532,47 +498,8 @@
     <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span>
   </div>
 
-  <!-- JavaScript logic specific to FAQ filtering & accordions -->
+  <!-- JavaScript logic specific to FAQ accordions -->
   <script>
-    function filterFaqs(catId) {
-      // 1. Update tab button styles
-      const tabIds = ["all", "doula", "yoga", "booking"];
-      tabIds.forEach(id => {
-        const btn = document.getElementById("faq_tab_" + id);
-        if (btn) {
-          if (id === catId) {
-            btn.className = "px-4.5 py-2.5 rounded-full text-xs tracking-wider uppercase font-semibold transition-all border bg-earth-clay border-earth-clay text-earth-light shadow-sm";
-          } else {
-            btn.className = "px-4.5 py-2.5 rounded-full text-xs tracking-wider uppercase font-semibold transition-all border bg-earth-light border-earth-clay/15 text-earth-dark/75 hover:bg-earth-light hover:border-earth-clay/30";
-          }
-        }
-      });
-
-      // 2. Hide/show faq items
-      const items = document.querySelectorAll(".faq-item");
-      items.forEach(item => {
-        const itemCat = item.dataset.category;
-        if (catId === "all" || itemCat === catId || itemCat === "all") {
-          item.classList.remove("hidden");
-        } else {
-          item.classList.add("hidden");
-        }
-        
-        // Collapse all items when filter changes
-        collapseFaq(item);
-      });
-    }
-
-    function collapseFaq(item) {
-      const panel = item.querySelector(".faq-panel");
-      const icon = item.querySelector(".faq-icon");
-      if (panel && icon) {
-        panel.classList.add("hidden");
-        icon.classList.remove("rotate-90", "bg-earth-clay", "text-earth-linen");
-        item.className = "faq-item border rounded-2xl overflow-hidden transition-all duration-300 bg-earth-linen border-earth-clay/10 hover:border-earth-clay/20";
-      }
-    }
-
     function toggleFaq(index) {
       const item = document.getElementById("faq_accordion_" + index);
       if (!item) return;
